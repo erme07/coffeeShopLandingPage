@@ -76,6 +76,10 @@
         height: 1px;
         margin: 0 auto;
     }
+    .scrollbar{
+        scrollbar-color:#6D1600 #6d160021;
+        scrollbar-width: thin;
+    }
 
     @screen xl{
         .button-main{
