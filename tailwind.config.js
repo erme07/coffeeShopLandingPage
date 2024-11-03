@@ -20,6 +20,15 @@ module.exports = {
         'dark': '#282A3A',
         'grey': '#D9D9D9',
         'braight-grey': '#F6F6F6'
+      },
+      keyframes: {
+        move: {
+          'from': { transform: 'translateX(0)' },
+          'to': { transform: 'translateX(5px)' }
+        }
+      },
+      animation: {
+        'move-slow': 'move .5s infinite alternate',
       }
     },
     container: {
