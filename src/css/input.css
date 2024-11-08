@@ -1,13 +1,4 @@
 
-:root {
-    --button-padding: 1rem;
-    --button-bg: #4CAF50;
-}
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @font-face {
     font-family: 'Playfair Display';
     src: url('../../assets/fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
@@ -56,27 +47,25 @@
     font-style: normal;
 }
 
+@tailwind base;
+@tailwind components;
 
+@layer components{
+    .button-main{
+        @apply flex items-center gap-[12px] p-[10px_30px] rounded-[0_22px_0_22px] font-playfairsc text-[14px] text-white bg-brand;
+        @apply xl:text-[20px] xl:p-[24px_48px] xl:rounded-[0_32px_0_32px];
+    }
+    .button-main svg{
+        @apply w-[18px] h-[18px] xl:w-[30px] xl:h-[30px] transition-all;
+    }
+    .button-main:hover svg{
+        @apply -rotate-45;
+    }
+}
+
+@tailwind utilities;
 
 @layer utilities{
-    .button-main{
-        display: flex;
-        gap: 12px;
-        padding: 10px 30px;
-        border-radius: 0 22px 0 22px;
-        font-family: 'PlayfairSC Display', 'san serif';
-        font-size: 14px;
-        color: white;
-        background-color: #6D1600;
-        &:hover{
-            svg {transform: rotate(-45deg);}
-        }
-    }
-    .separator{
-        width: 85%;
-        height: 1px;
-        margin: 0 auto;
-    }
     .scrollbar{
         scrollbar-color:#6D1600 #6d160021;
         scrollbar-width: thin;
@@ -115,13 +104,6 @@
             &:nth-child(2){transition-delay: 400ms;}
             &:nth-child(1){transition-delay: 500ms;}
         } 
-    }
-    @screen xl{
-        .button-main{
-            font:20px;
-            padding: 24px 48px;
-            border-radius: 0 32px 0 32px;
-        }
     }
 
 }

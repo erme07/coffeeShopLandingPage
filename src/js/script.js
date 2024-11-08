@@ -222,7 +222,6 @@ document.addEventListener("click", (e)=>{
 })
 
 document.addEventListener('touchstart', (e) =>{
-    console.log("client: " + e.touches[0].clientX,"screen: "+e.touches[0].screenX)
     if(e.touches[0].target.closest("#cards")){
         cardPress = true
         startX = e.touches[0].clientX;
