@@ -68,11 +68,6 @@
         font-size: 14px;
         color: white;
         background-color: #6D1600;
-        svg{
-            width: 18px;
-            height: 18px;
-            transition: all .1s;
-        }
         &:hover{
             svg {transform: rotate(-45deg);}
         }
@@ -126,10 +121,6 @@
             font:20px;
             padding: 24px 48px;
             border-radius: 0 32px 0 32px;
-            svg{
-                width: 30px;
-                height: 30px;
-            }
         }
     }
 
