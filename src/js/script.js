@@ -165,16 +165,20 @@ const handleMoveTestTouch = (e) =>{
 }
 
 const handleUpEvents = () =>{
+    console.log("primer parte")
     if(testPress){
+        $testimonial.removeEventListener("mousemove", handleMoveTest)
+        $testimonial.removeEventListener("touchmove", handleMoveTestTouch);
         $testimonial.classList.remove("grabbing");
         $testimonial.style.translate = `-${testimonial_pnumber*testimonialwidth}px`
-        $testimonial.removeEventListener("mousemove", handleMoveTest)
         testPress = false
     }
     if(cardPress){
-        $cards.classList.remove("grabbing");
+        console.log("segunda parte")
+        $cards.removeEventListener("mousemove", handleMoveCards)
+        $cards.removeEventListener("touchmove", handleMoveCardsTouch);
         $cards.style.translate = `-${cards_pnumber*cardWidth}px`
-        $cards.removeEventListener("mousemove", handleMoveCardsTouch)
+        $cards.classList.remove("grabbing");
         cardPress = false
     }
 }
@@ -183,7 +187,6 @@ let screensize = getScreenSize();
 orderDots()
 
 window.addEventListener("resize", (e)=>{
-    console.log("resize")
     if(getScreenSize() != screensize){
         testimonialwidth = $testimonial.parentElement.clientWidth + parseFloat(getComputedStyle($testimonial).gap)
         cardWidth= $cards.parentElement.clientWidth + parseFloat(getComputedStyle($cards).gap)
@@ -251,10 +254,5 @@ document.addEventListener('mousedown', (e) => {
     }
 });
 
-// const movePointer=()=>{
-//     console.log("flip")
-// }
-
 document.addEventListener('mouseup', handleUpEvents);
 document.addEventListener('touchend', handleUpEvents);
-// screen.orientation.addEventListener("change", () => movePointer());
