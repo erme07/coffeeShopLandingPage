@@ -1,3 +1,9 @@
+
+:root {
+    --button-padding: 1rem;
+    --button-bg: #4CAF50;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -50,6 +56,8 @@
     font-style: normal;
 }
 
+
+
 @layer utilities{
     .button-main{
         display: flex;
@@ -66,9 +74,7 @@
             transition: all .1s;
         }
         &:hover{
-            svg{
-                transform: rotate(-45deg);
-            }
+            svg {transform: rotate(-45deg);}
         }
     }
     .separator{
@@ -80,7 +86,41 @@
         scrollbar-color:#6D1600 #6d160021;
         scrollbar-width: thin;
     }
-
+    
+    .bars {
+        width: 30px;
+        cursor: pointer;
+        border: 1px solid currentColor;
+        border-radius:0 12px 0 12px;
+        .line {
+            stroke-width: 3;
+            stroke-linecap: square;
+            transition: stroke-dasharray 400ms,  stroke-dashoffset 400ms;
+            &.top, &.bottom {stroke-dasharray: 40 172;}
+            &.middle {stroke-dasharray: 40 111;}
+        }
+        &.active{
+            .top, .bottom {stroke-dashoffset: -132px;}
+            .middle {stroke-dashoffset: -71px;}
+        }
+    }
+    .menu{
+        transition: height 200ms,opacity 200ms;
+        li{transition: opacity 100ms;}
+    }
+    .menu.show{
+        height: 100vh;
+        opacity: 1;
+        transition: height 200ms;
+        li{
+            opacity: 1;
+            transition: opacity 100ms;
+            &:nth-child(4){transition-delay: 200ms;}
+            &:nth-child(3){transition-delay: 300ms}
+            &:nth-child(2){transition-delay: 400ms;}
+            &:nth-child(1){transition-delay: 500ms;}
+        } 
+    }
     @screen xl{
         .button-main{
             font:20px;

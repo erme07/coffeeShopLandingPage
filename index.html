@@ -4,41 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/css/output.css">
+    <script src="./src/js/script.js" defer></script>
     <title>Document</title>
 </head>
-<body class="font-inter text-dark font-normal">
-    <nav class="h-[70px] w-full">
+<body class="font-inter text-dark font-normal min-h-[2000px] relative overflow-x-hidden">
+    <nav class="h-[70px] w-full fixed inset-x-0 top-0 bg-[#ffffffdd] backdrop-blur-md shadow shadow-white transition-all z-50" id="navbar">
         <div class="container flex items-center h-full justify-between">
-            <svg class="text-brand w-[40px] h-[40px]">
-                <use href="./assets/icons/icons.svg#logo"></use>
-            </svg>
-            <ul class="flex gap-5">
-                <li class=" ">
-                    <a href="" class="p-[5px_10px] hover:bg-brand hover:text-white transition-all">Products</a>
+            <div class="lg:w-[150px] flex gap-2 relative z-10">
+                <svg class="text-brand w-[40px] h-[40px]">
+                    <use href="./assets/icons/icons.svg#logo"></use>
+                </svg>
+                <h1 class="font-semibold text-[28px]">Ngopi</h1>
+            </div>
+            <ul id="menu" class="menu bg-[#ffffffdd] md:bg-transparent flex flex-col md:flex-row justify-center items-center gap-5 overflow-hidden absolute md:static left-0 right-0 top-0 h-0 md:h-auto opacity-0 md:opacity-100" >
+                <li class="opacity-0 md:opacity-100">
+                    <a href="" class="p-[5px_10px] hover:bg-brand hover:text-white">Products</a>
                 </li>
-                <li class="">
-                    <a href="" class="p-[5px_10px] hover:bg-brand hover:text-white transition-all">About us</a>
+                <li class="opacity-0 md:opacity-100">
+                    <a href="" class="p-[5px_10px] hover:bg-brand hover:text-white">About us</a>
                 </li>
-                <li class="">
-                    <a href="" class="p-[5px_10px] hover:bg-brand hover:text-white transition-all">Testimonial</a>
+                <li class="opacity-0 md:opacity-100">
+                    <a href="" class="p-[5px_10px] hover:bg-brand hover:text-white">Testimonial</a>
                 </li>
-                <li class="">
-                    <a href="" class="p-[5px_10px] hover:bg-brand hover:text-white transition-all">Contact</a>
+                <li class="opacity-0 md:opacity-100">
+                    <a href="" class="p-[5px_10px] hover:bg-brand hover:text-white">Contact</a>
                 </li>
             </ul>
-            <div class="flex gap-4">
+            <div class="flex gap-4 lg:w-[150px] justify-end items-center relative">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <use href="./assets/icons/icons.svg#search"></use>
                 </svg>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <use href="./assets/icons/icons.svg#bag"></use>
                 </svg>
+                <svg class="md:hidden bars" id="burguer" viewBox="0 0 100 100" fill="none">
+                    <path class="line top pointer-events-none" stroke="currentcolor" d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272"></path>
+                    <path class="line middle pointer-events-none" stroke="currentcolor" d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272"></path>
+                    <path class="line bottom pointer-events-none" stroke="currentcolor" d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272"></path>
+                </svg>
             </div>
+            
         </div>
     </nav>
-    <header class="mb-[60px]">
-        <div class="container mx-auto px-3 flex flex-col items-center justify-around min-h-screen mt-[-70px] pt-[70px] gap-[20px]">
-            <div class="flex flex-col items-center text-center w-[630px] gap-[18px] xl:gap-[24px]">
+
+    <header class="mb-[80px]">
+        <div class="container flex flex-col items-center justify-evenly min-h-screen pt-[70px] gap-[20px]">
+            <div class="flex flex-col items-center text-center gap-[18px] xl:gap-[24px]">
 
                 <h1 class="font-playfair text-[35px] xl:text-[64px] leading-[120%]">Enjoy Your Favorite <br>Coffee with Ngopi</h1>
                 <p class="text-[13px] xl:text-[20px]">Discover tranquility at Ngopi a sanctuary for unwinding,<br> where your evenings are perfected with relaxation and rich flavors.</p>
@@ -48,45 +59,46 @@
                     </svg>
                 </a>
             </div>
-            <div class="w-full grid grid-cols-5 gap-12">
+            <div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-items-stretch gap-4 xl:gap-12">
                 <img src="./assets/img/header_a.webp" alt="" class="rounded-[0_60px_0_60px]">
                 <img src="./assets/img/header_b.webp" alt="" class="rounded-[60px_0_60px_0]">
-                <img src="./assets/img/header_c.webp" alt="" class="rounded-[0_60px_0_60px]">
-                <img src="./assets/img/header_d.webp" alt="" class="rounded-[60px_0_60px_0]">
-                <img src="./assets/img/header_e.webp" alt="" class="rounded-[0_60px_0_60px]">
+                <img src="./assets/img/header_c.webp" alt="" class="rounded-[0_60px_0_60px] hidden md:block">
+                <img src="./assets/img/header_d.webp" alt="" class="rounded-[60px_0_60px_0] hidden lg:block">
+                <img src="./assets/img/header_e.webp" alt="" class="rounded-[0_60px_0_60px] hidden lg:block">
             </div>
         </div>
     </header>
-    <section class="mb-[50px]">
+
+    <section class="mb-[80px]">
         <div class="container">
             <svg class="separator">
                 <use href="./assets/icons/icons.svg#separator-h" class=""></use>
             </svg>
-            <div class="p-[40px] xl:p-[80px] flex gap-[40px] text-center justify-center items-center">
-                <div class="flex flex-col gap-[8px] px-[10px]">
-                    <p class="text-[50px] xl:text-[64px] leading-[120%]">30+</p>
-                    <p class="font-playfair text-[18px] xl:text-[24px] leading-[120%]">Coffee variant</p>
+            <div class="p-[20px] lg:p-[40px] xl:p-[60px] flex flex-wrap gap-0 sm:gap-[10px] md:gap-[20px] lg:gap-[40px] text-center justify-center items-center">
+                <div class="basis-[49%] sm:basis-auto flex flex-col gap-[8px] px-[10px]">
+                    <p class="text-[30px] md:text-[40px] lg:text-[50px] xl:text-[64px] leading-[120%]">30+</p>
+                    <p class="font-playfair text-[14px] md:text-[16px] lg:text-[18px] xl:text-[24px] leading-[120%]">Coffee variant</p>
                 </div>
-                <svg class="w-[2px] h-[90px]">
+                <svg class="basis-[2%] sm:basis-auto w-[2px] h-[90px]">
                     <use href="./assets/icons/icons.svg#separator-v" class=""></use>
                 </svg>
-                <div class="flex flex-col gap-[8px] px-[10px]">
-                    <p class="text-[50px] xl:text-[64px] leading-[120%]">20+</p>
-                    <p class="font-playfair text-[18px] xl:text-[24px] leading-[120%]">Meeting Room</p>
+                <div class="basis-[49%] sm:basis-auto flex flex-col gap-[8px] px-[10px]">
+                    <p class="text-[30px] md:text-[40px] lg:text-[50px] xl:text-[64px] leading-[120%]">20+</p>
+                    <p class="font-playfair text-[14px] md:text-[16px] lg:text-[18px] xl:text-[24px] leading-[120%]">Meeting Room</p>
                 </div>
-                <svg class="w-[2px] h-[90px]">
+                <svg class="w-[2px] h-[90px] hidden sm:block">
                     <use href="./assets/icons/icons.svg#separator-v" class=""></use>
                 </svg>
-                <div class="flex flex-col gap-[8px] px-[10px]">
-                    <p class="text-[50px] xl:text-[64px] leading-[120%]">25+</p>
-                    <p class="font-playfair text-[18px] xl:text-[24px] leading-[120%]">Event Space</p>
+                <div class="basis-[49%] sm:basis-auto flex flex-col gap-[8px] px-[10px]">
+                    <p class="text-[30px] md:text-[40px] lg:text-[50px] xl:text-[64px] leading-[120%]">25+</p>
+                    <p class="font-playfair text-[14px] md:text-[16px] lg:text-[18px] xl:text-[24px] leading-[120%]">Event Space</p>
                 </div>
-                <svg class="w-[2px] h-[90px]">
+                <svg class="basis-[2%] sm:basis-auto w-[2px] h-[90px]">
                     <use href="./assets/icons/icons.svg#separator-v" class=""></use>
                 </svg>
-                <div class="flex flex-col gap-[8px] px-[10px]">
-                    <p class="text-[50px] xl:text-[64px] leading-[120%]">40+</p>
-                    <p class="font-playfair text-[18px] xl:text-[24px] leading-[120%]">Global Achievement</p>
+                <div class="basis-[49%] sm:basis-auto flex flex-col gap-[8px] px-[10px]">
+                    <p class="text-[30px] md:text-[40px] lg:text-[50px] xl:text-[64px] leading-[120%]">40+</p>
+                    <p class="font-playfair text-[14px] md:text-[16px] lg:text-[18px] xl:text-[24px] leading-[120%]">Global Achievement</p>
                 </div>
             </div>
             <svg class="separator">
@@ -94,118 +106,293 @@
             </svg>
         </div>
     </section>
+
     <section class="mb-[80px]">
-        <div class="container flex flex-col items-center gap-[40px]">
+        <div class="container flex flex-col items-center gap-[40px] overflow-x-hidden">
             <h2 class="font-playfair text-[36px] text-center mb-[20px] xl:mb-[40px]"><span class="font-inter text-[24px] block opacity-50 leading-[120%]">Our products</span>From Top Quality Materials</h2>
-            <div class="text-[18px] xl:text-[24px] bg-braight-grey p-[8px] rounded-[40px] flex">
-                <button class="p-[8px_34px] xl:p-[16px_40px] rounded-[40px] bg-white"><span class="opacity-70">Latte</span></button>
-                <button class="p-[8px_34px] xl:p-[16px_40px] rounded-[40px] "><span class="opacity-70">Robusta</span></button>
-                <button class="p-[8px_34px] xl:p-[16px_40px] rounded-[40px] "><span class="opacity-70">Acabica</span></button>
+            <div class="text-[13px] sm:text-[18px] xl:text-[24px] bg-braight-grey p-[8px] rounded-[40px] flex">
+                <button class="p-[6px_28px] sm:p-[8px_34px] xl:p-[16px_40px] rounded-[40px] bg-white"><span class="opacity-70">Latte</span></button>
+                <button class="p-[6px_28px] sm:p-[8px_34px] xl:p-[16px_40px] rounded-[40px] "><span class="opacity-70">Robusta</span></button>
+                <button class="p-[6px_28px] sm:p-[8px_34px] xl:p-[16px_40px] rounded-[40px] "><span class="opacity-70">Acabica</span></button>
             </div>
-
-            <div class="grid grid-cols-12 gap-[24px] mb-[20px]">
-                <div class="col-span-3 flex flex-col text-[16px]">
-                    <img src="./assets/img/card_a.webp" alt="" class="rounded-[0_40px_0_40px]">
-                    <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
-                        <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Chocolate Latte</h3>
-                        <div class="flex items-center gap-1">
-                            <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                <use href="./assets/icons/icons.svg#star"></use>
-                            </svg>
-                            <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">4.9</span>
-                            <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(360 reviews)</span>
-                        </div>
-                        <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-[20px]">$2.9</span>
-                            <button class="text-brand">
-                                <svg class="w-[80px] h-[32px]">
-                                    <use href="./assets/icons/icons.svg#plus"></use>
+            <div class="flex w-[235px] sm:w-[490px] md:w-full overflow-x-hidden select-none">
+                <div id="cards" class="flex self-start sm:gap-[20px] md:gap-[21.5px] lg:gap-[21.33px] transition-all cursor-grab">
+                    <div class="w-[235px] flex flex-col text-[16px]">
+                        <img src="./assets/img/card_a.webp" alt="" class="rounded-[0_40px_0_40px]" draggable="false">
+                        <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
+                            <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Chocolate Latte</h3>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                    <use href="./assets/icons/icons.svg#star"></use>
                                 </svg>
-                            </button>
+                                <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">4.9</span>
+                                <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(360 reviews)</span>
+                            </div>
+                            <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-[20px]">$2.9</span>
+                                <button class="text-brand">
+                                    <svg class="w-[80px] h-[32px]">
+                                        <use href="./assets/icons/icons.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[235px] flex flex-col text-[16px]">
+                        <img src="./assets/img/card_b.webp" alt="" class="rounded-[0_40px_0_40px]" draggable="false">
+                        <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
+                            <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Mocha Latte</h3>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                    <use href="./assets/icons/icons.svg#star"></use>
+                                </svg>
+                                <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">5.0</span>
+                                <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(180 reviews)</span>
+                            </div>
+                            <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-[20px]">$2.7</span>
+                                <button class="text-brand">
+                                    <svg class="w-[80px] h-[32px]">
+                                        <use href="./assets/icons/icons.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[235px] flex flex-col text-[16px]">
+                        <img src="./assets/img/card_c.webp" alt="" class="rounded-[0_40px_0_40px]" draggable="false">
+                        <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
+                            <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Coffee Latte</h3>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                    <use href="./assets/icons/icons.svg#star"></use>
+                                </svg>
+                                <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">4.8</span>
+                                <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(450 reviews)</span>
+                            </div>
+                            <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-[20px]">$2.9</span>
+                                <button class="text-brand">
+                                    <svg class="w-[80px] h-[32px]">
+                                        <use href="./assets/icons/icons.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[235px] flex flex-col text-[16px]">
+                        <img src="./assets/img/card_d.webp" alt="" class="rounded-[0_40px_0_40px]" draggable="false">
+                        <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
+                            <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Hazelnut Latte</h3>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                    <use href="./assets/icons/icons.svg#star"></use>
+                                </svg>
+                                <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">4.9</span>
+                                <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(390 reviews)</span>
+                            </div>
+                            <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-[20px]">$2.8</span>
+                                <button class="text-brand">
+                                    <svg class="w-[80px] h-[32px]">
+                                        <use href="./assets/icons/icons.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[235px] flex flex-col text-[16px]">
+                        <img src="./assets/img/card_a.webp" alt="" class="rounded-[0_40px_0_40px]" draggable="false">
+                        <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
+                            <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Chocolate Latte</h3>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                    <use href="./assets/icons/icons.svg#star"></use>
+                                </svg>
+                                <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">4.9</span>
+                                <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(360 reviews)</span>
+                            </div>
+                            <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-[20px]">$2.9</span>
+                                <button class="text-brand">
+                                    <svg class="w-[80px] h-[32px]">
+                                        <use href="./assets/icons/icons.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[235px] flex flex-col text-[16px]">
+                        <img src="./assets/img/card_b.webp" alt="" class="rounded-[0_40px_0_40px]" draggable="false">
+                        <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
+                            <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Mocha Latte</h3>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                    <use href="./assets/icons/icons.svg#star"></use>
+                                </svg>
+                                <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">5.0</span>
+                                <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(180 reviews)</span>
+                            </div>
+                            <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-[20px]">$2.7</span>
+                                <button class="text-brand">
+                                    <svg class="w-[80px] h-[32px]">
+                                        <use href="./assets/icons/icons.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[235px] flex flex-col text-[16px]">
+                        <img src="./assets/img/card_c.webp" alt="" class="rounded-[0_40px_0_40px]" draggable="false">
+                        <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
+                            <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Coffee Latte</h3>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                    <use href="./assets/icons/icons.svg#star"></use>
+                                </svg>
+                                <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">4.8</span>
+                                <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(450 reviews)</span>
+                            </div>
+                            <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-[20px]">$2.9</span>
+                                <button class="text-brand">
+                                    <svg class="w-[80px] h-[32px]">
+                                        <use href="./assets/icons/icons.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[235px] flex flex-col text-[16px]">
+                        <img src="./assets/img/card_d.webp" alt="" class="rounded-[0_40px_0_40px]" draggable="false">
+                        <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
+                            <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Hazelnut Latte</h3>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                    <use href="./assets/icons/icons.svg#star"></use>
+                                </svg>
+                                <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">4.9</span>
+                                <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(390 reviews)</span>
+                            </div>
+                            <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-[20px]">$2.8</span>
+                                <button class="text-brand">
+                                    <svg class="w-[80px] h-[32px]">
+                                        <use href="./assets/icons/icons.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[235px] flex flex-col text-[16px]">
+                        <img src="./assets/img/card_a.webp" alt="" class="rounded-[0_40px_0_40px]" draggable="false">
+                        <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
+                            <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Chocolate Latte</h3>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                    <use href="./assets/icons/icons.svg#star"></use>
+                                </svg>
+                                <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">4.9</span>
+                                <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(360 reviews)</span>
+                            </div>
+                            <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-[20px]">$2.9</span>
+                                <button class="text-brand">
+                                    <svg class="w-[80px] h-[32px]">
+                                        <use href="./assets/icons/icons.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[235px] flex flex-col text-[16px]">
+                        <img src="./assets/img/card_b.webp" alt="" class="rounded-[0_40px_0_40px]" draggable="false">
+                        <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
+                            <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Mocha Latte</h3>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                    <use href="./assets/icons/icons.svg#star"></use>
+                                </svg>
+                                <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">5.0</span>
+                                <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(180 reviews)</span>
+                            </div>
+                            <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-[20px]">$2.7</span>
+                                <button class="text-brand">
+                                    <svg class="w-[80px] h-[32px]">
+                                        <use href="./assets/icons/icons.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[235px] flex flex-col text-[16px]">
+                        <img src="./assets/img/card_c.webp" alt="" class="rounded-[0_40px_0_40px]" draggable="false">
+                        <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
+                            <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Coffee Latte</h3>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                    <use href="./assets/icons/icons.svg#star"></use>
+                                </svg>
+                                <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">4.8</span>
+                                <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(450 reviews)</span>
+                            </div>
+                            <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-[20px]">$2.9</span>
+                                <button class="text-brand">
+                                    <svg class="w-[80px] h-[32px]">
+                                        <use href="./assets/icons/icons.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[235px] flex flex-col text-[16px]">
+                        <img src="./assets/img/card_d.webp" alt="" class="rounded-[0_40px_0_40px]" draggable="false">
+                        <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
+                            <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Hazelnut Latte</h3>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                    <use href="./assets/icons/icons.svg#star"></use>
+                                </svg>
+                                <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">4.9</span>
+                                <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(390 reviews)</span>
+                            </div>
+                            <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-[20px]">$2.8</span>
+                                <button class="text-brand">
+                                    <svg class="w-[80px] h-[32px]">
+                                        <use href="./assets/icons/icons.svg#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-span-3 flex flex-col text-[16px]">
-                    <img src="./assets/img/card_b.webp" alt="" class="rounded-[0_40px_0_40px]">
-                    <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
-                        <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Mocha Latte</h3>
-                        <div class="flex items-center gap-1">
-                            <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                <use href="./assets/icons/icons.svg#star"></use>
-                            </svg>
-                            <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">5.0</span>
-                            <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(180 reviews)</span>
-                        </div>
-                        <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-[20px]">$2.7</span>
-                            <button class="text-brand">
-                                <svg class="w-[80px] h-[32px]">
-                                    <use href="./assets/icons/icons.svg#plus"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-span-3 flex flex-col text-[16px]">
-                    <img src="./assets/img/card_c.webp" alt="" class="rounded-[0_40px_0_40px]">
-                    <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
-                        <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Coffee Latte</h3>
-                        <div class="flex items-center gap-1">
-                            <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                <use href="./assets/icons/icons.svg#star"></use>
-                            </svg>
-                            <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">4.8</span>
-                            <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(450 reviews)</span>
-                        </div>
-                        <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-[20px]">$2.9</span>
-                            <button class="text-brand">
-                                <svg class="w-[80px] h-[32px]">
-                                    <use href="./assets/icons/icons.svg#plus"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-span-3 flex flex-col text-[16px]">
-                    <img src="./assets/img/card_d.webp" alt="" class="rounded-[0_40px_0_40px]">
-                    <div class="flex flex-col gap-[12px] xl:gap-[16px] p-[16px_20px] xl:p-[16px_24px]">
-                        <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px]">Hazelnut Latte</h3>
-                        <div class="flex items-center gap-1">
-                            <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                <use href="./assets/icons/icons.svg#star"></use>
-                            </svg>
-                            <span class="font-bold text-[16px] xl:text-[20px] leading-[120%]">4.9</span>
-                            <span class="opacity-70 leading-[140%] ml-1 text-[14px] xl:text-[16px]">(390 reviews)</span>
-                        </div>
-                        <p class="opacity-70 leading-[140%] text-[14px] xl:text-[16px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla</p>
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-[20px]">$2.8</span>
-                            <button class="text-brand">
-                                <svg class="w-[80px] h-[32px]">
-                                    <use href="./assets/icons/icons.svg#plus"></use>
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-span-12 flex justify-center gap-2 text-grey mt-[20px]">
-                    <svg class="cursor-pointer text-brand" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="4" cy="4" r="4" fill="currentcolor"/>
-                    </svg>
-                    <svg class="cursor-pointer" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="4" cy="4" r="4" fill="currentcolor"/>
-                    </svg>
-                    <svg class="cursor-pointer" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="4" cy="4" r="4" fill="currentcolor"/>
-                    </svg>
-                    <svg class="cursor-pointer" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="4" cy="4" r="4" fill="currentcolor"/>
-                    </svg>
-                </div>
+            </div>
+            <div class=" flex justify-center gap-2 text-grey mb-[40px]" id="dotContainerCards">
+                <svg class="cursor-pointer text-brand" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" data-name="cardsDot" data-value="0">
+                    <circle cx="4" cy="4" r="4" fill="currentcolor" class="pointer-events-none"/>
+                </svg>
+                <svg class="cursor-pointer" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" data-name="cardsDot" data-value="1">
+                    <circle cx="4" cy="4" r="4" fill="currentcolor" class="pointer-events-none"/>
+                </svg>
+                <svg class="cursor-pointer" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg" data-name="cardsDot" data-value="2">
+                    <circle cx="4" cy="4" r="4" fill="currentcolor" class="pointer-events-none"/>
+                </svg>
             </div>
             <svg class="separator">
                 <use href="./assets/icons/icons.svg#separator-h" class=""></use>
@@ -214,10 +401,10 @@
     </section>
 
     <section class="mb-[80px]">
-        <div class="container flex flex-col items-center gap-[80px]">
+        <div class="container flex flex-col items-center gap-[50px] sm:gap-[80px]">
             <h2 class="font-playfair text-[36px] text-center"><span class="font-inter text-[24px] block opacity-50 leading-[120%]">About us</span>Why we are the best</h2>
-            <div class="grid grid-cols-2 text-[16px] xl:text-[20px] gap-[80px]">
-                <div class="col-span-1 flex flex-col items-start gap-[24px]">
+            <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-2 justify-items-center text-[16px] xl:text-[20px] gap-[60px] sm:gap-[40px] lg:gap-[80px]">
+                <div class="col-span-1 sm:col-span-2 lg:col-span-1 flex flex-col items-center sm:items-start gap-[24px] leading-[160%]">
                     <p>Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing.</p>
                     <p>Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc.</p>
                     <p>Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet.</p>
@@ -227,9 +414,9 @@
                         </svg>
                     </a>
                 </div>
-                <div class="col-span-1 flex gap-[24px]">
-                    <img src="./assets/img/about_a.webp" alt="" class="w-[200px] self-end rounded-[0_90px_0_90px] xl:rounded-[0_120px_0_120px]">
-                    <img src="./assets/img/about_b.webp" alt="" class="w-[200px] self-start rounded-[90px_0_90px_0] xl:rounded-[120px_0_120px_0]">
+                <div class="col-span-1 lg:col-span-1 flex gap-[24px]">
+                    <img src="./assets/img/about_a.webp" alt="" class="w-[220px] xl:w-[288px] self-center lg:self-end rounded-[0_90px_0_90px] xl:rounded-[0_120px_0_120px]">
+                    <img src="./assets/img/about_b.webp" alt="" class="hidden lg:block w-[220px] xl:w-[288px] self-start rounded-[90px_0_90px_0] xl:rounded-[120px_0_120px_0]">
                 </div>
             </div>
             <svg class="separator">
@@ -239,101 +426,170 @@
     </section>
 
     <section class="mb-[80px]">
-        <div class="container flex flex-col items-center gap-[40px]">
+        <div class="container flex flex-col items-center gap-[40px] overflow-x-hidden ">
             <h2 class="font-playfair text-[36px] text-center"><span class="font-inter text-[24px] block opacity-50 leading-[120%]">Testimonial</span>What our buyers say</h2>
-            <div class="grid grid-cols-12 gap-[32px] mb-[40px]">
-                <div class="col-span-4 flex flex-col gap-[16px] p-[20px] xl:p-[40px]">
-                    <div class="flex items-center gap-[16px]">
-                        <img src="./assets/img/user_a.webp" alt="" class="w-[80px] xl:w-[100px]">
-                        <div class="flex flex-col">
-                            <h3 class="font-semibold text-[20px]">Michael Wong</h3>
-                            <span class="flex">
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                            </span>
+            <div class="flex w-[300px] sm:w-[620px] md:w-[660px] lg:w-full overflow-x-hidden select-none">
+
+                <div class="flex gap-[20px] lg:gap-[21.33px] self-start relative transition-all cursor-grab" id="testimonial">
+                    <div class="w-[300px] md:w-[320px] flex flex-col gap-[16px] p-[20px] xl:p-[40px]">
+                        <div class="flex items-center gap-[16px]">
+                            <img src="./assets/img/user_a.webp" alt="" class="w-[80px] xl:w-[100px]">
+                            <div class="flex flex-col">
+                                <h3 class="font-semibold text-[20px]">Michael Wong</h3>
+                                <span class="flex">
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                </span>
+                            </div>
                         </div>
+                        <p class="text-[16px] xl:text-[20px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing.</p>
                     </div>
-                    <p class="text-[16px] xl:text-[20px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing.</p>
-                </div>
-                <div class="col-span-4 flex flex-col gap-[16px] p-[20px] xl:p-[40px]">
-                    <div class="flex items-center gap-[16px]">
-                        <img src="./assets/img/user_b.webp" alt="" class="w-[80px] xl:w-[100px]">
-                        <div class="flex flex-col">
-                            <h3 class="font-semibold text-[20px]">Avril Song</h3>
-                            <span class="flex">
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-grey">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                            </span>
+                    <div class="w-[300px] md:w-[320px] flex flex-col gap-[16px] p-[20px] xl:p-[40px]">
+                        <div class="flex items-center gap-[16px]">
+                            <img src="./assets/img/user_b.webp" alt="" class="w-[80px] xl:w-[100px]">
+                            <div class="flex flex-col">
+                                <h3 class="font-semibold text-[20px]">Avril Song</h3>
+                                <span class="flex">
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-grey">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                </span>
+                            </div>
                         </div>
+                        <p class="text-[16px] xl:text-[20px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc.</p>
                     </div>
-                    <p class="text-[16px] xl:text-[20px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc.</p>
-                </div>
-                <div class="col-span-4 flex flex-col gap-[16px] p-[20px] xl:p-[40px]">
-                    <div class="flex items-center gap-[16px]">
-                        <img src="./assets/img/user_c.webp" alt="" class="w-[80px] xl:w-[100px]">
-                        <div class="flex flex-col">
-                            <h3 class="font-semibold text-[20px]">Jeanne Wood</h3>
-                            <span class="flex">
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                                <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-grey">
-                                    <use href="./assets/icons/icons.svg#star"></use>
-                                </svg>
-                            </span>
+                    <div class="w-[300px] md:w-[320px] flex flex-col gap-[16px] p-[20px] xl:p-[40px]">
+                        <div class="flex items-center gap-[16px]">
+                            <img src="./assets/img/user_c.webp" alt="" class="w-[80px] xl:w-[100px]">
+                            <div class="flex flex-col">
+                                <h3 class="font-semibold text-[20px]">Jeanne Wood</h3>
+                                <span class="flex">
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-grey">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                </span>
+                            </div>
                         </div>
+                        <p class="text-[16px] xl:text-[20px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing.</p>
                     </div>
-                    <p class="text-[16px] xl:text-[20px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing.</p>
+                    <div class="w-[300px] md:w-[320px] flex flex-col gap-[16px] p-[20px] xl:p-[40px]">
+                        <div class="flex items-center gap-[16px]">
+                            <img src="./assets/img/user_a.webp" alt="" class="w-[80px] xl:w-[100px]">
+                            <div class="flex flex-col">
+                                <h3 class="font-semibold text-[20px]">Michael Wong</h3>
+                                <span class="flex">
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <p class="text-[16px] xl:text-[20px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing.</p>
+                    </div>
+                    <div class="w-[300px] md:w-[320px] flex flex-col gap-[16px] p-[20px] xl:p-[40px]">
+                        <div class="flex items-center gap-[16px]">
+                            <img src="./assets/img/user_b.webp" alt="" class="w-[80px] xl:w-[100px]">
+                            <div class="flex flex-col">
+                                <h3 class="font-semibold text-[20px]">Avril Song</h3>
+                                <span class="flex">
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-grey">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <p class="text-[16px] xl:text-[20px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc.</p>
+                    </div>
+                    <div class="w-[300px] md:w-[320px] flex flex-col gap-[16px] p-[20px] xl:p-[40px]">
+                        <div class="flex items-center gap-[16px]">
+                            <img src="./assets/img/user_c.webp" alt="" class="w-[80px] xl:w-[100px]">
+                            <div class="flex flex-col">
+                                <h3 class="font-semibold text-[20px]">Jeanne Wood</h3>
+                                <span class="flex">
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-[#FFB31F]">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                    <svg class="w-[15px] h-[15px] xl:w-[19px] xl:h-[19px] text-grey">
+                                        <use href="./assets/icons/icons.svg#star"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <p class="text-[16px] xl:text-[20px]">Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc. Viverra malesuada viverra id vel tortor dui adipiscing.</p>
+                    </div>
                 </div>
-                <div class="col-span-12 flex justify-center gap-2 text-grey mt-[20px]">
-                    <svg class="cursor-pointer text-brand" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="4" cy="4" r="4" fill="currentcolor"/>
-                    </svg>
-                    <svg class="cursor-pointer" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="4" cy="4" r="4" fill="currentcolor"/>
-                    </svg>
-                    <svg class="cursor-pointer" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="4" cy="4" r="4" fill="currentcolor"/>
-                    </svg>
-                    <svg class="cursor-pointer" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="4" cy="4" r="4" fill="currentcolor"/>
-                    </svg>
-                </div>
+            </div>
+            <div class="flex justify-center gap-2 text-grey mt-[20px] mb-[40px]" id="dotContainerTest">
             </div>
             <svg class="separator">
                 <use href="./assets/icons/icons.svg#separator-h" class=""></use>
@@ -344,80 +600,80 @@
     <section class="mb-[80px]">
         <div class="container flex flex-col items-center gap-[30px] xl:gap-[50px]">
             <h2 class="font-playfair text-[36px] text-center"><span class="font-inter text-[24px] block opacity-50 leading-[120%]">Blog</span>Read our articles</h2>
-            <div class="grid grid-cols-12 gap-[24px]">
-                <div class="col-span-4 flex flex-col gap-[16px] text-[16px] p-[16px]">
-                    <img src="./assets/img/blog_a.webp" alt="" class="rounded-[0_80px_0_80px]">
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-[15px] sm:gap-[5px] md:gap-[10px] lg:gap-[24px]">
+                <div class="col-span-1 sm:col-span-4 max-w-[375px] sm:max-w-none flex flex-col gap-[16px] text-[16px] p-[10px] md:p-[16px]">
+                    <img src="./assets/img/blog_a.webp" alt="" class="rounded-[0_50px_0_50px] md:rounded-[0_80px_0_80px]">
                     <div class="flex flex-col gap-[12px] xl:gap-[16px]">
-                        <div class="flex justify-between items-center text-[14px]">
-                            <div class="flex items-center gap-2">
-                                <svg class="w-[18px] h-[17px] inline">
+                        <div class="flex justify-between items-center text-[14px] sm:text-[12px] lg:text-[14px]">
+                            <div class="flex items-center gap-1 md:gap-2">
+                                <svg class="w-[18px] sm:w-[16px] lg:w-[18px] h-[17px] sm:h-[15px] lg:h-[17px] inline">
                                     <use href="./assets/icons/icons.svg#user" class=""></use>
                                 </svg>
                                 <span>John Doe</span>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <svg class="w-[18px] h-[17px] inline">
+                            <div class="flex items-center gap-1 md:gap-2">
+                                <svg class="w-[18px] sm:w-[16px] lg:w-[18px] h-[17px] sm:h-[15px] lg:h-[17px] inline">
                                     <use href="./assets/icons/icons.svg#calendar" class=""></use>
                                 </svg>
                                 <span>Feb 23, 2024</span>
                             </div>
                         </div>
-                        <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px] leading-[140%]">Lorem ipsum dolor sit amet consectetur. Est tempor morbi pellentesque.</h3>
-                        <div class="flex gap-[10px] self-end items-center pr-[16px] group">
-                            <a href="" class="hover:underline">View details</a>
-                            <svg class="w-[16px] h-[16px] group-hover:animate-move-slow">
+                        <h3 class="font-jakarta font-semibold text-[20px] sm:text-[16px] lg:text-[20px] xl:text-[24px] leading-[140%]">Lorem ipsum dolor sit amet consectetur. Est tempor morbi pellentesque.</h3>
+                        <div class="flex gap-[10px] text-[16px] sm:text-[12px] lg:text-[16px] self-end items-center pr-[16px] group">
+                            <a href="" class="hover:underline ">View details</a>
+                            <svg class="w-[1em] h-[1em] group-hover:animate-move-slow">
                                 <use href="./assets/icons/icons.svg#arrow-r" class=""></use>
                             </svg>
                         </div>
                     </div>
                 </div>
-                <div class="col-span-4 flex flex-col gap-[16px] text-[16px] p-[16px]">
-                    <img src="./assets/img/blog_b.webp" alt="" class="rounded-[0_80px_0_80px]">
+                <div class="col-span-1 sm:col-span-4 max-w-[375px] sm:max-w-none flex flex-col gap-[16px] text-[16px] p-[10px] md:p-[16px]">
+                    <img src="./assets/img/blog_b.webp" alt="" class="rounded-[0_50px_0_50px] md:rounded-[0_80px_0_80px]">
                     <div class="flex flex-col gap-[12px] xl:gap-[16px]">
-                        <div class="flex justify-between items-center text-[14px]">
-                            <div class="flex items-center gap-2">
-                                <svg class="w-[18px] h-[17px] inline">
+                        <div class="flex justify-between items-center text-[14px] sm:text-[12px] lg:text-[14px]">
+                            <div class="flex items-center gap-1 md:gap-2">
+                                <svg class="w-[18px] sm:w-[16px] lg:w-[18px] h-[17px] sm:h-[15px] lg:h-[17px] inline">
                                     <use href="./assets/icons/icons.svg#user" class=""></use>
                                 </svg>
                                 <span>John Doe</span>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <svg class="w-[18px] h-[17px] inline">
+                            <div class="flex items-center gap-1 md:gap-2">
+                                <svg class="w-[18px] sm:w-[16px] lg:w-[18px] h-[17px] sm:h-[15px] lg:h-[17px] inline">
                                     <use href="./assets/icons/icons.svg#calendar" class=""></use>
                                 </svg>
                                 <span>Feb 23, 2024</span>
                             </div>
                         </div>
-                        <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px] leading-[140%]">Lorem ipsum dolor sit amet consectetur. Est tempor morbi pellentesque.</h3>
-                        <div class="flex gap-[10px] self-end items-center pr-[16px] group">
+                        <h3 class="font-jakarta font-semibold text-[20px] sm:text-[16px] lg:text-[20px] xl:text-[24px] leading-[140%]">Lorem ipsum dolor sit amet consectetur. Est tempor morbi pellentesque.</h3>
+                        <div class="flex gap-[10px] text-[16px] sm:text-[12px] lg:text-[16px] self-end items-center pr-[16px] group">
                             <a href="" class="hover:underline">View details</a>
-                            <svg class="w-[16px] h-[16px] group-hover:animate-move-slow">
+                            <svg class="w-[1em] h-[1em] group-hover:animate-move-slow">
                                 <use href="./assets/icons/icons.svg#arrow-r" class=""></use>
                             </svg>
                         </div>
                     </div>
                 </div>
-                <div class="col-span-4 flex flex-col gap-[16px] text-[16px] p-[16px]">
-                    <img src="./assets/img/blog_c.webp" alt="" class="rounded-[0_80px_0_80px]">
+                <div class="col-span-1 sm:col-span-4 max-w-[375px] sm:max-w-none flex flex-col gap-[16px] text-[16px] p-[10px] md:p-[16px]">
+                    <img src="./assets/img/blog_c.webp" alt="" class="rounded-[0_50px_0_50px] md:rounded-[0_80px_0_80px]">
                     <div class="flex flex-col gap-[12px] xl:gap-[16px]">
-                        <div class="flex justify-between items-center text-[14px]">
-                            <div class="flex items-center gap-2">
-                                <svg class="w-[18px] h-[17px] inline">
+                        <div class="flex justify-between items-center text-[14px] sm:text-[12px] lg:text-[14px]">
+                            <div class="flex items-center gap-1 md:gap-2">
+                                <svg class="w-[18px] sm:w-[16px] lg:w-[18px] h-[17px] sm:h-[15px] lg:h-[17px] inline">
                                     <use href="./assets/icons/icons.svg#user" class=""></use>
                                 </svg>
                                 <span>John Doe</span>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <svg class="w-[18px] h-[17px] inline">
+                            <div class="flex items-center gap-1 md:gap-2">
+                                <svg class="w-[18px] sm:w-[16px] lg:w-[18px] h-[17px] sm:h-[15px] lg:h-[17px] inline">
                                     <use href="./assets/icons/icons.svg#calendar" class=""></use>
                                 </svg>
                                 <span>Feb 23, 2024</span>
                             </div>
                         </div>
-                        <h3 class="font-jakarta font-semibold text-[20px] xl:text-[24px] leading-[140%]">Lorem ipsum dolor sit amet consectetur. Est tempor morbi pellentesque.</h3>
-                        <div class="flex gap-[10px] self-end items-center pr-[16px] group">
+                        <h3 class="font-jakarta font-semibold text-[20px] sm:text-[16px] lg:text-[20px] xl:text-[24px] leading-[140%]">Lorem ipsum dolor sit amet consectetur. Est tempor morbi pellentesque.</h3>
+                        <div class="flex gap-[10px] text-[16px] sm:text-[12px] lg:text-[16px] self-end items-center pr-[16px] group">
                             <a href="" class="hover:underline">View details</a>
-                            <svg class="w-[16px] h-[16px] group-hover:animate-move-slow">
+                            <svg class="w-[1em] h-[1em] group-hover:animate-move-slow">
                                 <use href="./assets/icons/icons.svg#arrow-r" class=""></use>
                             </svg>
                         </div>
@@ -434,41 +690,41 @@
 
     <footer class="bg-dark text-white">
         
-        <div class="container grid grid-cols-3 gap-[70px] py-[70px]">
-            <div class="col-span-1 flex flex-col gap-[30px]">
-                <div class="flex items-center gap-4">
-                    <svg class="w-[55px] h-[55px]">
+        <div class="container grid grid-cols-1 md:grid-cols-3 gap-[50px] lg:gap-[70px] py-[70px]">
+            <div class="col-span-1 flex flex-col items-center md:items-start text-center md:text-left gap-[30px]">
+                <div class="flex items-center gap-4 text-[50px] lg:text-[55px]">
+                    <svg class="w-[1em] h-[1em]">
                         <use href="./assets/icons/icons.svg#logo"></use>
                     </svg>
-                    <h3 class="font-semibold text-[48px]">Ngopi</h2>
+                    <h3 class="font-semibold text-[43px] lg:text-[48px]">Ngopi</h2>
                 </div>
-                <p class="text-[16px] xl:text-[20px]">Discover tranquility at Ngopi a sanctuary for unwinding, where your evenings are perfected with relaxation and rich flavors.</p>
-                <div>
+                <p class="text-[14px] lg:text-[16px] xl:text-[20px]">Discover tranquility at Ngopi a sanctuary for unwinding, where your evenings are perfected with relaxation and rich flavors.</p>
+                <div class="hidden sm:block text-[14px] lg:text-[16px]">
                     <span>hello@ngopi.com</span><br>
                     <span>Phone : +01 23456789</span>
                 </div>
             </div>
-            <div class="col-span-2 flex flex-col gap-[30px]">
-                <div class="flex justify-between">
+            <div class="col-span-1 md:col-span-2 flex flex-col gap-[30px]">
+                <div class="flex flex-wrap justify-around sm:justify-between">
                     <div class="flex flex-col gap-[20px] xl:gap-[24px]">
-                        <h4 class="font-playfair text-[28px]">Quick Links</h4>
+                        <h4 class="font-playfair text-[22px] lg:text-[28px]">Quick Links</h4>
                         <ul class="flex flex-col gap-[8px] xl:gap-[12px]">
-                            <li class="text-[13px] xl:text-[16px]"><a href="" class="hover:underline underline-offset-2 decoration-2">Services</a></li>
-                            <li class="text-[13px] xl:text-[16px]"><a href="" class="hover:underline underline-offset-2 decoration-2">Portfolio</a></li>
-                            <li class="text-[13px] xl:text-[16px]"><a href="" class="hover:underline underline-offset-2 decoration-2">About us</a></li>
-                            <li class="text-[13px] xl:text-[16px]"><a href="" class="hover:underline underline-offset-2 decoration-2">Testimonial</a></li>
+                            <li class="text-[12px] lg:text-[13px] xl:text-[16px]"><a href="" class="hover:underline underline-offset-2 decoration-2">Services</a></li>
+                            <li class="text-[12px] lg:text-[13px] xl:text-[16px]"><a href="" class="hover:underline underline-offset-2 decoration-2">Portfolio</a></li>
+                            <li class="text-[12px] lg:text-[13px] xl:text-[16px]"><a href="" class="hover:underline underline-offset-2 decoration-2">About us</a></li>
+                            <li class="text-[12px] lg:text-[13px] xl:text-[16px]"><a href="" class="hover:underline underline-offset-2 decoration-2">Testimonial</a></li>
                         </ul>
                     </div>
                     <div class="flex flex-col gap-[20px] xl:gap-[24px]">
-                        <h4 class="font-playfair text-[28px]">Resources</h4>
+                        <h4 class="font-playfair text-[22px] lg:text-[28px]">Resources</h4>
                         <ul class="flex flex-col gap-[8px] xl:gap-[12px]">
-                            <li class="text-[13px] xl:text-[16px]"><a href="" class="hover:underline underline-offset-2 decoration-2">Support</a></li>
-                            <li class="text-[13px] xl:text-[16px]"><a href="" class="hover:underline underline-offset-2 decoration-2">Privacy Policy</a></li>
-                            <li class="text-[13px] xl:text-[16px]"><a href="" class="hover:underline underline-offset-2 decoration-2">Terms & Conditions</a></li>
+                            <li class="text-[12px] lg:text-[13px] xl:text-[16px]"><a href="" class="hover:underline underline-offset-2 decoration-2">Support</a></li>
+                            <li class="text-[12px] lg:text-[13px] xl:text-[16px]"><a href="" class="hover:underline underline-offset-2 decoration-2">Privacy Policy</a></li>
+                            <li class="text-[12px] lg:text-[13px] xl:text-[16px]"><a href="" class="hover:underline underline-offset-2 decoration-2">Terms & Conditions</a></li>
                         </ul>
                     </div>
-                    <div class="flex flex-col gap-[20px] xl:gap-[24px]">
-                        <h4 class="font-playfair text-[28px]">Social Media</h4>
+                    <div class="basis-full sm:basis-auto order-first sm:order-none flex flex-col items-center sm:items-start gap-[20px] xl:gap-[24px] mb-[40px] sm:mb-0">
+                        <h4 class="hidden sm:block font-playfair text-[22px] lg:text-[28px]">Social Media</h4>
                         <div class="flex gap-2">
                             <a href="" class="bg-[#ffffff14] hover:bg-brand">
                                 <svg class="w-[35px] h-[35px]">
@@ -500,11 +756,11 @@
                 </div>
                 <div class="flex flex-col gap-[20px] xl:gap-[24px]">
                     
-                    <h4 class="font-playfair text-[28px]">Resources</h4>
-                    <form action="" class="h-[80px] bg-[#ffffff14] rounded-2xl p-[8px] flex gap-3 relative">
+                    <h4 class="font-playfair text-[22px] lg:text-[28px] hidden sm:block">Resources</h4>
+                    <form action="" class="h-[160px] sm:h-[80px] bg-[#ffffff14] rounded-2xl p-[8px] flex flex-wrap gap-3 relative">
                         <input type="email" class="bg-transparent grow pl-[60px] pr-[20px] rounded-lg" placeholder="name@domain.com">
-                        <button class="w-[150px] rounded-lg bg-brand">Send</button>
-                        <svg class="w-[35px] h-[35px] absolute top-1/2 -translate-y-1/2 left-6">
+                        <button class="w-full sm:w-[150px] rounded-lg bg-brand">Send</button>
+                        <svg class="w-[35px] h-[35px] absolute top-1/4 sm:top-1/2 -translate-y-1/2 left-6">
                             <use href="./assets/icons/icons.svg#mail"></use>
                         </svg>
                     </form>
