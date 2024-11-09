@@ -53,10 +53,10 @@
 @layer components{
     .button-main{
         @apply flex items-center gap-[12px] p-[10px_30px] rounded-[0_22px_0_22px] font-playfairsc text-[14px] text-white bg-brand;
-        @apply xl:text-[20px] xl:p-[24px_48px] xl:rounded-[0_32px_0_32px];
+        @apply xl:text-[16px] xl:p-[15px_35px] xl:rounded-[0_32px_0_32px];
     }
     .button-main svg{
-        @apply w-[18px] h-[18px] xl:w-[30px] xl:h-[30px] transition-all;
+        @apply w-[18px] h-[18px] xl:w-[20px] xl:h-[20px] transition-all;
     }
     .button-main:hover svg{
         @apply -rotate-45;
